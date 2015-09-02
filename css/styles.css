@@ -601,12 +601,16 @@ table {
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-/* line 46, ../sass/layouts/_responsive.scss */
+/* line 50, ../sass/layouts/_responsive.scss */
 #header,
 #content,
 #navigation,
 .region-sidebar-first,
 .region-sidebar-second,
+.region-center-1,
+.region-center-2,
+.region-center-3,
+.region-center-4,
 #footer {
   padding-left: 10px;
   padding-right: 10px;
@@ -635,21 +639,21 @@ table {
 }
 
 /*example style*/
-/* line 59, ../sass/layouts/_responsive.scss */
+/* line 63, ../sass/layouts/_responsive.scss */
 .centers {
   boader: 10px solid green;
 }
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
-  /* line 65, ../sass/layouts/_responsive.scss */
+  /* line 69, ../sass/layouts/_responsive.scss */
   #main {
     /* Move all the children of #main down to make room. */
     padding-top: 3em;
     position: relative;
   }
 
-  /* line 70, ../sass/layouts/_responsive.scss */
+  /* line 74, ../sass/layouts/_responsive.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
@@ -665,12 +669,12 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 91, ../sass/layouts/_responsive.scss */
+  /* line 95, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 93, ../sass/layouts/_responsive.scss */
+  /* line 97, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 83.33333%;
@@ -680,28 +684,28 @@ table {
     padding-right: 0;
     clear: left;
   }
-  /* line 99, ../sass/layouts/_responsive.scss */
+  /* line 103, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-center-1 {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 104, ../sass/layouts/_responsive.scss */
+  /* line 108, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-center-2 {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 110, ../sass/layouts/_responsive.scss */
+  /* line 114, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-center-3 {
     float: left;
     width: 33.33333%;
     margin-left: 66.66667%;
     margin-right: -100%;
   }
-  /* line 116, ../sass/layouts/_responsive.scss */
+  /* line 120, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-center-4 {
     clear: both;
     float: left;
@@ -709,7 +713,7 @@ table {
     margin-left: 0%;
     margin-right: -100%;
   }
-  /* line 123, ../sass/layouts/_responsive.scss */
+  /* line 127, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 16.66667%;
@@ -720,19 +724,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 131, ../sass/layouts/_responsive.scss */
+  /* line 135, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 133, ../sass/layouts/_responsive.scss */
+  /* line 137, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 138, ../sass/layouts/_responsive.scss */
+  /* line 142, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 16.66667%;
@@ -743,27 +747,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 146, ../sass/layouts/_responsive.scss */
+  /* line 150, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 148, ../sass/layouts/_responsive.scss */
+  /* line 152, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 50%;
     margin-left: 66.66667%;
     margin-right: -116.66667%;
   }
-  /* line 153, ../sass/layouts/_responsive.scss */
+  /* line 157, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 158, ../sass/layouts/_responsive.scss */
+  /* line 162, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -777,7 +781,7 @@ table {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 164, ../sass/layouts/_responsive.scss */
+  /* line 168, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -787,7 +791,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 168, ../sass/layouts/_responsive.scss */
+  /* line 172, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 16.66667%;
@@ -795,14 +799,14 @@ table {
     margin-right: -16.66667%;
     clear: left;
   }
-  /* line 173, ../sass/layouts/_responsive.scss */
+  /* line 177, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 16.66667%;
     margin-left: 16.66667%;
     margin-right: -33.33333%;
   }
-  /* line 177, ../sass/layouts/_responsive.scss */
+  /* line 181, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 16.66667%;
@@ -817,13 +821,13 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 195, ../sass/layouts/_responsive.scss */
+  /* line 199, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Center content */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 197, ../sass/layouts/_responsive.scss */
+  /* line 201, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 77.77778%;
@@ -832,7 +836,7 @@ table {
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 204, ../sass/layouts/_responsive.scss */
+  /* line 208, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-center-1 {
     clear: left;
     float: left;
@@ -840,7 +844,7 @@ table {
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 209, ../sass/layouts/_responsive.scss */
+  /* line 213, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-center-2 {
     /* @include zen-clear(left);*/
     float: left;
@@ -848,14 +852,14 @@ table {
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 214, ../sass/layouts/_responsive.scss */
+  /* line 218, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-center-3 {
     float: left;
     width: 33.33333%;
     margin-left: 66.66667%;
     margin-right: -100%;
   }
-  /* line 218, ../sass/layouts/_responsive.scss */
+  /* line 222, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-center-4 {
     clear: both;
     float: left;
@@ -863,7 +867,7 @@ table {
     margin-left: 0%;
     margin-right: -100%;
   }
-  /* line 224, ../sass/layouts/_responsive.scss */
+  /* line 228, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 22.22222%;
@@ -874,19 +878,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 234, ../sass/layouts/_responsive.scss */
+  /* line 238, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 236, ../sass/layouts/_responsive.scss */
+  /* line 240, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 55.55556%;
     margin-left: 0%;
     margin-right: -55.55556%;
   }
-  /* line 241, ../sass/layouts/_responsive.scss */
+  /* line 245, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 22.22222%;
@@ -897,27 +901,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 249, ../sass/layouts/_responsive.scss */
+  /* line 253, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 251, ../sass/layouts/_responsive.scss */
+  /* line 255, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 33.33333%;
     margin-left: 22.22222%;
     margin-right: -55.55556%;
   }
-  /* line 257, ../sass/layouts/_responsive.scss */
+  /* line 261, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 22.22222%;
     margin-left: 0%;
     margin-right: -22.22222%;
   }
-  /* line 262, ../sass/layouts/_responsive.scss */
+  /* line 266, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 22.22222%;
@@ -925,6 +929,11 @@ table {
     margin-right: -77.77778%;
   }
 }
+/* line 272, ../sass/layouts/_responsive.scss */
+.region-center-1, .region-center-2, .region-center-3, .region-center-4 {
+  border: 5px solid teal;
+}
+
 /* Component (SMACSS module) rules */
 /**
  * @file

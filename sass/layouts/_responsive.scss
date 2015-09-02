@@ -43,6 +43,10 @@ $zen-auto-include-item-base: false;
 #navigation,
 .region-sidebar-first,
 .region-sidebar-second,
+.region-center-1,
+.region-center-2,
+.region-center-3,
+.region-center-4,
 #footer {
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -263,4 +267,9 @@ $zen-auto-include-item-base: false;
       @include zen-grid-item(2, 6);
     }
   }
+}
+
+.region-center-1, .region-center-2, .region-center-3, .region-center-4 {
+	border: 5px solid teal;
+
 }
