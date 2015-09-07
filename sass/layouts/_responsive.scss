@@ -59,10 +59,6 @@ $zen-auto-include-item-base: false;
   @include zen-grid-container();
 }
 
-/*example style*/
-.centers {
-   boader: 10px solid green;
-}
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
@@ -269,7 +265,30 @@ $zen-auto-include-item-base: false;
   }
 }
 
-.region-center-1, .region-center-2, .region-center-3, .region-center-4 {
-	border: 5px solid teal;
 
+/**SASS styling to generate style.css  **/
+
+$red: #D11E32;
+$blue: #004891;
+$yellow: #ECC315;
+$white: #F2F2F3;
+$black: #0D0D0D;
+
+body {
+   background-color: $black;  
+   background-image: url(images/white-sandstone.gif);  
 }
+
+#page {background-color: $white;}
+
+#header { background-color: $white;}
+
+h2 {
+  background-color: $white; 
+ border-bottom:1px solid; 
+}
+
+/**.region-sidebar-first {
+  margin:0 0 0 1.5em; 
+  background-color: #212121;
+}**/
