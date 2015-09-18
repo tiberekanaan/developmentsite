@@ -1,4 +1,4 @@
-BUILD A THEME WITH ZEN
+BUILD A THEME WITH ZEN Example
 ----------------------
 
 **CHECKING GIT, modifying to see changes**
