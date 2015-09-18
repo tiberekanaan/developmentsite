@@ -34,7 +34,7 @@ $zen-auto-include-item-base: false;
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -47,6 +47,8 @@ $zen-auto-include-item-base: false;
 .region-center-2,
 .region-center-3,
 .region-center-4,
+.region-footer1,
+.region-footer2,
 #footer {
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -187,7 +189,7 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 960px) {
 
   $zen-column-count: 9;
-  $zen-gutter-width: 20px;
+  
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -196,7 +198,7 @@ $zen-auto-include-item-base: false;
     /* Span 4 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(7, 3);
-      $zen-gutter-width: 20px;
+      $zen-gutter-width: 10px;
       @include zen-nested-container();
     }
 
@@ -224,6 +226,16 @@ $zen-auto-include-item-base: false;
     .region-sidebar-first {
       @include zen-grid-item(2, 1);
     }
+
+    .region-footer1 {
+      @include zen-clear(both);
+      @include zen-grid-item(5, 1, left);
+    }
+
+    .region-footer2 {
+      @include zen-grid-item(4, 6);
+    }
+
   }
 
   
@@ -283,9 +295,16 @@ body {
 
 #header { background-color: $white;}
 
+h2.block-title {
+  background-color:transparent;
+}
 h2 {
   background-color: $white; 
- border-bottom:1px solid; 
+ 
+}
+
+#main {
+   padding-top: 0;
 }
 
 /**.region-sidebar-first {

@@ -106,12 +106,14 @@
       ?>
 
     <?php if ($center_1 || $center_2 || $center_3 || $center_4): ?>
-      <div class="centers">
+      <section>
+         <article class="centers">
           <?php print $center_1; ?>
           <?php print $center_2; ?>
           <?php print $center_3; ?>
           <?php print $center_4; ?>
-      </div>
+         </article>
+      </section>
     <?php endif; ?>
 
 
@@ -134,7 +136,8 @@
 
   </div>
 
-  <?php print render($page['footer']); ?>
+  <?php print render($page['footer1']); ?>
+  <?php print render($page['footer2']); ?>
 </div>
 
 <?php print render($page['bottom']); ?>
