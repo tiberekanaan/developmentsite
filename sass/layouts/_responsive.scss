@@ -31,7 +31,8 @@ $zen-auto-include-item-base: false;
  * by setting a max-width.
  */
 #page,
-.region-bottom {
+.region-bottom,
+{
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
@@ -43,12 +44,6 @@ $zen-auto-include-item-base: false;
 #navigation,
 .region-sidebar-first,
 .region-sidebar-second,
-.region-center-1,
-.region-center-2,
-.region-center-3,
-.region-center-4,
-.region-footer1,
-.region-footer2,
 #footer {
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -85,7 +80,10 @@ $zen-auto-include-item-base: false;
  */
 @media all and (min-width: 480px) and (max-width: 959px) {
 
-  $zen-column-count: 6;
+  $zen-column-count: 3;
+  body{
+    color:teal; 
+ }
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -93,34 +91,10 @@ $zen-auto-include-item-base: false;
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     #content {
-      @include zen-grid-item(5, 2);
-      @include zen-nested-container();
-      @include zen-clear();
-    }
+      @include zen-grid-item(2, 2);
+   }
 
-    .region-center-1 {
-	@include zen-grid-item(2, 1, left);
-
-    }
-
-    .region-center-2 {
-	@include zen-grid-item(2, 3);
-
-
-    }
-
-    .region-center-3 {
-	@include zen-grid-item(2, 5);
-
-
-    }
-
-    .region-center-4 {
-	@include zen-clear(both);
-	@include zen-grid-item(6, 1);
-
-    }
-
+    
     /* Span 1 column, starting in 1st column from left. */
     .region-sidebar-first {
       @include zen-grid-item(1, 1);
@@ -188,59 +162,33 @@ $zen-auto-include-item-base: false;
  */
 @media all and (min-width: 960px) {
 
-  $zen-column-count: 9;
+  $zen-column-count: 5;
   
-
+  body{
+    color:rgb(41,39,101);
+  }
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  .sidebar-first {
-    /* Span 4 columns, starting in 2nd column from left. */
-    #content {
-      @include zen-grid-item(7, 3);
-      $zen-gutter-width: 10px;
-      @include zen-nested-container();
-    }
-
-    /* Center content */
-    .region-center-1 {
-      @include zen-clear(left);
-      @include zen-grid-item(3, 1, left);
-    }
-
-    .region-center-2 {
-     /* @include zen-clear(left);*/
-      @include zen-grid-item(3, 4);
-    }
-
-    .region-center-3 {
-      @include zen-grid-item(3, 7)
-    }
-
-    .region-center-4 {
-      @include zen-clear(both);
-      @include zen-grid-item(9, 1);
-    }
    
-    /* Span 1 column, starting in 1st column from left. */
-    .region-sidebar-first {
-      @include zen-grid-item(2, 1);
-    }
+     .sidebar-first {
+        /* Span 4 columns, starting in 2nd column from left. */
+       #content {
+         @include zen-grid-item(3, 3);
+         $zen-gutter-width: 10px;
+        
+       }
 
-    .region-footer1 {
-      @include zen-clear(both);
-      @include zen-grid-item(5, 1, left);
-    }
+       }
+   
+       /* Span 1 column, starting in 1st column from left. */
+       .region-sidebar-first {
+           @include zen-grid-item(2, 1);
+       }
 
-    .region-footer2 {
-      @include zen-grid-item(4, 6);
-    }
-
-  }
-
-  
-
-  /**
+     
+ 
+ /**
    * The layout when there is only one sidebar, the right one.
    */
   .sidebar-second {
@@ -278,6 +226,7 @@ $zen-auto-include-item-base: false;
 }
 
 
+
 /**SASS styling to generate style.css  **/
 
 $red: #D11E32;
@@ -291,9 +240,18 @@ body {
    background-image: url(images/white-sandstone.gif);  
 }
 
-#page {background-color: $white;}
 
-#header { background-color: $white;}
+#header { 
+  background-color: $blue;
+  margin-top: 30px;
+  border-bottom: solid 2px; color:grey;
+}
+
+div#section-clearfix{
+   max-width:1200px;
+   margin-left: auto;
+   margin-right: auto;
+}
 
 h2.block-title {
   background-color:transparent;
@@ -303,11 +261,28 @@ h2 {
  
 }
 
+
 #main {
-   padding-top: 0;
+   padding-top: 0; 
+   background-color: $white;
 }
 
-/**.region-sidebar-first {
-  margin:0 0 0 1.5em; 
-  background-color: #212121;
-}**/
+img {
+ margin: 10px 0;
+}
+
+h1#site-name {
+  width:509px;
+  height: 67px;
+  margin-top:25px;
+  margin-left:10px;
+  padding: 0px;
+  background: url(../../images/text.png) no repeat;
+  text-indent: -9999px;
+}
+
+footer#footer{
+   max-width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+}
