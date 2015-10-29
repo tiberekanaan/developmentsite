@@ -48,7 +48,30 @@
 
     <?php print render($page['header']); ?>
 
-   <div id="navigation">
+  </header>
+
+  <div id="main">
+
+    <div id="content" class="column" role="main">
+      <?php print render($page['highlighted']); ?>
+      <?php print $breadcrumb; ?>
+      <a id="main-content"></a>
+      <?php print render($title_prefix); ?>
+      <?php if ($title): ?>
+        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
+      <?php print $messages; ?>
+      <?php print render($tabs); ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+      <?php print $feed_icons; ?>
+    </div>
+
+    <div id="navigation">
 
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation" tabindex="-1">
@@ -75,52 +98,6 @@
 
     </div>
 
-  </header>
-
-  <div id="main">
-
-    <div id="content" class="column" role="main">
-      <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-
-      <?php 
-      // Render nested contents.
-      $center_1 = render($page['center_1']);
-      $center_2 = render($page['center_2']);
-      $center_3 = render($page['center_3']);
-      $center_4 = render($page['center_4']);
-      ?>
-
-    <?php if ($center_1 || $center_2 || $center_3 || $center_4): ?>
-      <section>
-         <article class="centers">
-          <?php print $center_1; ?>
-          <?php print $center_2; ?>
-          <?php print $center_3; ?>
-          <?php print $center_4; ?>
-         </article>
-      </section>
-    <?php endif; ?>
-
-
-
-    </div>
-
-   
     <?php
       // Render the sidebars to see if there's anything in them.
       $sidebar_first  = render($page['sidebar_first']);
@@ -136,10 +113,8 @@
 
   </div>
 
-  <?php print render($page['footer1']); ?>
-  <?php print render($page['footer2']); ?>
+  <?php print render($page['footer']); ?>
+
 </div>
 
 <?php print render($page['bottom']); ?>
-
-

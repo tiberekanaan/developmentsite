@@ -96,8 +96,7 @@ regions[center_3]       = Center Third
 regions[center_4]       = Center Fourth
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
-regions[footer1]         = Footer1
-regions[footer2]        = Footer2
+regions[footer]         = Footer
 regions[bottom]         = Page bottom
 
 ; The page_top and page_bottom regions are hidden, which means they will not
