@@ -44,6 +44,8 @@ $zen-auto-include-item-base: false;
 #navigation,
 .region-sidebar-first,
 .region-sidebar-second,
+.first-content,
+.second-content,
 #footer {
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -162,7 +164,7 @@ $zen-auto-include-item-base: false;
  */
 @media all and (min-width: 960px) {
 
-  $zen-column-count: 5;
+  $zen-column-count: 6;
   
   body{
     color:rgb(41,39,101);
@@ -174,11 +176,20 @@ $zen-auto-include-item-base: false;
      .sidebar-first {
         /* Span 4 columns, starting in 2nd column from left. */
        #content {
-         @include zen-grid-item(3, 3);
+         @include zen-grid-item(4, 3);
          $zen-gutter-width: 10px;
+	 @include zen-nested-container();
+	 @include zen-clear(); 
         
        }
 
+      .region-content-first{
+	   @include zen-grid-item(3, 1, left);
+      }
+
+     .region-content-second{
+	 @include zen-grid-item(3, 4);
+     }
        }
    
        /* Span 1 column, starting in 1st column from left. */
@@ -237,14 +248,15 @@ $black: #0D0D0D;
 
 body {
    background-color: $black;  
-   background-image: url(images/white-sandstone.gif);  
+   background-image: url(images/white-sandstone.gif);
+   font-family: Helvetica, sans-serif, Verdana, Arial;  
 }
 
 
 #header { 
   background-color: $blue;
   margin-top: 30px;
-  border-bottom: solid 2px; color:grey;
+  border-bottom: groove 2px; color:black;
 }
 
 div#section-clearfix{
@@ -258,7 +270,7 @@ h2.block-title {
 }
 h2 {
   background-color: $white; 
- 
+  text-transform: uppercase; 
 }
 
 
